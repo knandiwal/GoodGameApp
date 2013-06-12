@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    
+  <title>GoodGame</title>
+    
+  <!--======= Basic Metas =======-->
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<meta name="description" content="">
+  <meta name="keywords" content="">
+	<meta name="author" content="">
+
+	<!--======= Mobile Metas =======-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width">
+    
+	<!--======= Favicons =======-->
+    
+  <!-- website favicon -->
+  <!-- <link rel="shortcut icon" href="_img/favicon.png"> -->
+  <!-- iPhone, iPod Touch -->
+  <!-- <link rel="apple-touch-icon" href="_img/apple-touch-icon.png"> -->
+  <!-- iPhone with Retina display -->
+  <!-- <link rel="apple-touch-icon" sizes="114x114" href="_img/apple-touch-icon-114x114.png"> -->
+  <!-- iPad first and second generation -->
+  <!-- <link rel="apple-touch-icon" sizes="72x72" href="_img/apple-touch-icon-72x72.png"> -->
+  <!-- iPad with Retina display -->
+  <!-- <link rel="apple-touch-icon" sizes="144x144" href="_img/apple-touch-icon-144x144.png">     -->
+    
+  <!--======= CSS =======-->
+    
+  <!-- CSS Hórus Framework -->
+	<link rel="stylesheet" type="text/css" href="css/horus.css">
+    <!-- Your Style -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+    <div id='global_top_bar'>
+        <div id='menu_button' ng-controller="Panel" ng-click="toggle()">
+            <span class="menu-small-bar"></span>
+            <span class="menu-small-bar"></span>
+            <span class="menu-small-bar"></span>
+        </div>
+    </div>
+    <div ng-controller="List" data-ng-init="init()">
+        <table class='entrie_list'>
+            <tr class='entrie_line' ng-repeat="item in list_items" ng-click="show_stream($index)">
+                <td class='entrie_img'><img src="{{ item.prev }}"></td>
+                <td class='entrie_text'>
+                    <div>
+                        <h4>{{ item.title }}</h4>
+                        <i>{{ item.streamer }}</i>
+                    </div>
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+    
+    <div ng-controller="Panel" data-ng-init="init()" id='menu_block'>
+            <div class='manu_item' ng-repeat="elem in menu_items" ng-click="load($index)">
+                {{elem.text}}
+            </div>
+    </div>
+    
+    <div id='player_block'>
+
+    </div>
+    
+
+
+
+  <!--======= JS =======-->
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/list.js"></script>
+  <script type="text/javascript" src="js/panel.js"></script>
+  <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript">
+
+
+
+
+  </script>
+
+</body>
+</html>
