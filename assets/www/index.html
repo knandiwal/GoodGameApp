@@ -40,15 +40,16 @@
 
 </head>
 
-<body>
+<body ng-controller="List">
     <div id='global_top_bar'>
-        <div id='menu_button' ng-controller="Panel" ng-click="toggle()">
+        <div id='menu_button' ng-click="toggle()">
             <span class="menu-small-bar"></span>
             <span class="menu-small-bar"></span>
             <span class="menu-small-bar"></span>
         </div>
+        <div id='text_on_logo'>GoodGameRU</div>
     </div>
-    <div ng-controller="List" data-ng-init="init()">
+    <div data-ng-init="init()" id="main_list">
 
         <div class="entrie_list_d">
             <div class="entrie_line_d" ng-repeat="item in list_items" ng-click="show_stream($index)">
@@ -75,14 +76,55 @@
         <!--</table>-->
     </div>
     
-    <div ng-controller="Panel" data-ng-init="init()" id='menu_block'>
-            <div class='manu_item' ng-repeat="elem in menu_items" ng-click="load($index)">
+    <div id='menu_block'>
+            <div class='menu_item' ng-repeat="elem in menu_items" ng-click="menu_call($index)">
                 {{elem.text}}
             </div>
     </div>
     
     <div id='player_block'>
 
+    </div>
+
+    <div id='about_dialog'>
+      <h3>GoodGame.Ru</h3>
+      <div>
+        <a onclick="navigator.app.loadUrl('http://goodgame.ru', { openExternal:true });" href="#">© 2007 – ∞ ООО «Мидиан»</a>
+      </div> 
+
+      <br><br>
+
+      <h3>Apache Cordova under Apache License, Version 2.0</h3>
+      <div>
+      <a  onclick="navigator.app.loadUrl('http://www.apache.org/licenses/LICENSE-2.0', { openExternal:true });" href="#" >Apache License, Version 2.0</a>
+      </div> 
+
+      <br><br>
+
+      <h3>AngularJS under MIT license</h3>
+      <div>
+      <b>The MIT License (MIT)<b>
+      <br><br>
+      Copyright (c) 2010-2012 Google
+      <br><br>
+      Permission is hereby granted, free of charge, to any person obtaining a copy
+      of this software and associated documentation files (the "Software"), to deal
+      in the Software without restriction, including without limitation the rights
+      to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+      copies of the Software, and to permit persons to whom the Software is
+      furnished to do so, subject to the following conditions:
+      <br><br>
+      The above copyright notice and this permission notice shall be included in
+      all copies or substantial portions of the Software.
+      <br><br>
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+      IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+      AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+      LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+      OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+      THE SOFTWARE.
+      </div> 
     </div>
     
 

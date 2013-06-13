@@ -20,19 +20,22 @@
 package com.vegasq.goodgame;
 
 import android.os.Bundle;
-import org.apache.cordova.*;
 import android.view.WindowManager;
 
-public class goodgameapp extends DroidGap
-{
+import org.apache.cordova.Config;
+import org.apache.cordova.DroidGap;
+
+public class goodgameapp extends DroidGap {
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN |
-            WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+                WindowManager.LayoutParams.FLAG_FULLSCREEN |
+                        WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN
+        );
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         // Set by <content src="index.html" /> in config.xml
         super.loadUrl(Config.getStartUrl());
