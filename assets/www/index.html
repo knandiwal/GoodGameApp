@@ -37,10 +37,6 @@
     <!-- Your Style -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
-	<![endif]-->
 
 </head>
 
@@ -53,19 +49,30 @@
         </div>
     </div>
     <div ng-controller="List" data-ng-init="init()">
-        <table class='entrie_list'>
-            <tr class='entrie_line' ng-repeat="item in list_items" ng-click="show_stream($index)">
-                <td class='entrie_img'><img src="{{ item.prev }}"></td>
-                <td class='entrie_text'>
-                    <div>
-                        <h4>{{ item.title }}</h4>
-                        <i>{{ item.streamer }}</i>
-                    </div>
-                </td>
-            </tr>
+
+        <div class="entrie_list_d">
+            <div class="entrie_line_d" ng-repeat="item in list_items" ng-click="show_stream($index)">
+                <img class="entrie_image" src="{{ item.prev }}">
+                <div class="entrie_descr">
+                    <br>
+                    <span>{{ item.title }}</span><br>
+                    <i>{{ item.streamer }}</i>
+                </div>
+
+            </div>
+        </div>
+
+        <!--<table class='entrie_list'>-->
+            <!--<tr class='entrie_line' ng-repeat="item in list_items" ng-click="show_stream($index)">-->
+                <!--<td class='entrie_img'><img src="{{ item.prev }}"></td>-->
+                <!--<td class='entrie_text'>-->
+                    <!--<span>{{ item.title }}</span><br>-->
+                    <!--<i>{{ item.streamer }}</i>-->
+                <!--</td>-->
+            <!--</tr>-->
 
 
-        </table>
+        <!--</table>-->
     </div>
     
     <div ng-controller="Panel" data-ng-init="init()" id='menu_block'>

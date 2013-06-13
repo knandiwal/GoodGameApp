@@ -21,6 +21,7 @@ package com.vegasq.goodgame;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
+import android.view.WindowManager;
 
 public class goodgameapp extends DroidGap
 {
@@ -28,6 +29,11 @@ public class goodgameapp extends DroidGap
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN |
+            WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+
         // Set by <content src="index.html" /> in config.xml
         super.loadUrl(Config.getStartUrl());
         //super.loadUrl("file:///android_asset/www/index.html")

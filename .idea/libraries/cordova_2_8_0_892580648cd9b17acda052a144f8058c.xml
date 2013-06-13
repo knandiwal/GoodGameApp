@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="cordova-2.8.0-892580648cd9b17acda052a144f8058c">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/cordova-2.8.0-892580648cd9b17acda052a144f8058c.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
