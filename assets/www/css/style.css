@@ -91,6 +91,9 @@ cursor: pointer;
     padding-left: 1.5em;
     float:left;
     display: inline;
+    width: calc(100% - 12em);
+    width: -moz-calc(100% - 12em);
+    width: -webkit-calc(100% - 12em);
 }
 
 .entrie_line_d > .entrie_descr > span {
