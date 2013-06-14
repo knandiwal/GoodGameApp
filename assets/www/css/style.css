@@ -1,4 +1,8 @@
-body{padding-top:6em;  }
+html, body {
+padding:0;
+margin:0;
+}
+body{padding-top:6em; }
 #global_top_bar {
 width: 100%;
 height: 6em;
@@ -6,25 +10,75 @@ background-color: black;
 position: fixed;
 top: 0;
 }
-#global_top_bar > div {
+#global_top_bar > div.buttons {
+text-align: center;
 width: 7em;
-height: 4em;
-border-right: 1px solid darkgray;
+height: 100%;
+border-left: 1px solid darkgray;
 cursor: pointer;
-padding-top: 2em;
 
 }
+#global_top_bar > div.buttons > span {
+    margin-top:1.5em;
+}
+
+#refresh_button, #menu_button {
+    float:right;
+    width: 5em;
+    height: 5em;
+}
+
+#refresh_button {
+}
+#refr_img {
+    padding-top: 0.8em;
+}
+#menu_img {
+    padding-top: 0.8em;
+}
+.refresh_a, .refresh_b {
+
+    width: 2em;
+    height: 2em;
+    border-color: white;
+    display:block;
+    position: relative;
+}
+.refresh_a {
+    border-top:0.8em solid white;
+    border-left:0.8em solid white;
+    margin-left: 1.5em;
+}
+.refresh_b {
+border-bottom: 0.8em solid white;
+border-right: 0.8em solid white;
+margin-top: -2.5em !important;
+margin-left: 2.5em;
+}
+
 .menu-small-bar { 
 display: block;
-height: 0.4em;
-width: 2em;
+height: 0.8em;
+width: 0.8em;
 background-color: white;
 margin: 0 auto;
-margin-bottom: 5px;
+margin-bottom: 0.2em;
+}
+.menu-small-line { 
+display: block;
+height: 2em;
+width: 0.8em;
+background-color: white;
+margin: 0 auto;
+margin-top: 0.5em !important;
 }
 
-#text_on_logo { float: right; color: white; font-size: 3em; font-weight: bold; 
-    margin-top:-3.2em;
+#text_on_logo { float: right; color: white; 
+color: white;
+font-size: 3em;
+font-weight: bold;
+padding: 0.4em;
+float:left !important;
 }
 
 .entrie_line { height: 5em; padding:4px; }
@@ -109,3 +163,9 @@ cursor: pointer;
 font-size: 2em;
 font-weight:bold;
 }
+
+#about_dialog { font-size: 2em; }
+
+
+
+

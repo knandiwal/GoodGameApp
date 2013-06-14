@@ -33,20 +33,29 @@
   <!--======= CSS =======-->
     
   <!-- CSS Hórus Framework -->
-	<link rel="stylesheet" type="text/css" href="css/horus.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/horus.css">-->
     <!-- Your Style -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 
 </head>
 
-<body ng-controller="List">
+<body ng-controller="List" style="background-color: black;" id="body">
     <div id='global_top_bar'>
-        <div id='menu_button' ng-click="toggle()">
-            <span class="menu-small-bar"></span>
-            <span class="menu-small-bar"></span>
-            <span class="menu-small-bar"></span>
+
+        <div class='buttons' id='menu_button' ng-click="about()">
+          <img id="menu_img" alt="" />
+<!--             <span class="menu-small-bar"></span>
+            <span class="menu-small-line"></span> -->
         </div>
+
+        <div class='buttons' id='refresh_button' ng-click="refresh_button()">
+            <img id="refr_img" alt="" />
+    <!--         <span class="refresh_a"></span>
+            <span class="refresh_b"></span> -->
+        </div>
+
+
         <div id='text_on_logo'>GoodGameRU</div>
     </div>
     <div data-ng-init="init()" id="main_list">
@@ -76,11 +85,6 @@
         <!--</table>-->
     </div>
     
-    <div id='menu_block'>
-            <div class='menu_item' ng-repeat="elem in menu_items" ng-click="menu_call($index)">
-                {{elem.text}}
-            </div>
-    </div>
     
     <div id='player_block'>
 

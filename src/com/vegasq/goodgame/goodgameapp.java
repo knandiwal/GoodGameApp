@@ -37,8 +37,12 @@ public class goodgameapp extends DroidGap {
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
+//        setSystemUiVisibility(SYSTEM_UI_FLAG_LOW_PROFILE);
+        super.setIntegerProperty("splashscreen", R.drawable.splash);
+        super.loadUrl(Config.getStartUrl(), 4000);
+
         // Set by <content src="index.html" /> in config.xml
-        super.loadUrl(Config.getStartUrl());
+//        super.loadUrl(Config.getStartUrl());
         //super.loadUrl("file:///android_asset/www/index.html")
     }
 }
